@@ -1,458 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap Cards</title>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fontawesome.com/releases/v6.0.0/css/all.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sony Brand Clone</title>
 
-    <style>
-        .card{
-            margin-top:40px;
-            border:none !important;
-        }
-        
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-        .img-sec{
-            /* margin: 200px 300px; */
-            color: white;
-            font-weight: 300;
-            
-        }
-        .card-text h4{
-            font-weight: 300;
-            font-size: 21px;
-        }
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-        .dropdown a{
-            color: white !important;
-        }
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ================== HEADER (RESPONSIVE) ================== -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark top-navbar">
+        <div class="container-fluid px-4 px-lg-5">
+          <!-- Sony Logo -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://d1ncau8tqf99kp.cloudfront.net/media/sony-logo-200.png"
+              alt="Sony Logo"
+              style="height: 20px"
+            />
+          </a>
 
-        .links{
-            margin-left: 200px;
-        }
-        .links a{
-            margin-left: 40px;
-            color: white;
-            text-decoration: none;
-        }
-        
-        .fas.fa-shipping-fast {
-        width: 30px;
-        color: white;
-        float:right;
-}
-.navbar-toggler{
-    background-color: white !important;
-    margin-top: 10px;
-}
-
-
-/* Shipping Icon */
-    </style>
-    
-    <nav class="navbar navbar-expand-lg navbar-light" style="background: black !important;">
-        <div class="container-fluid">
-            <div class="row d-flex">
-                <div class="col-12">
-            <img src="https://d1ncau8tqf99kp.cloudfront.net/media/sony-logo-200.png" style="margin-left: 80px; height: 20px;" alt="" class="navbrand">
-            
-           
-
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
-            <ul class="navbar-nav ">
-              
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Support
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Services</a></li>
-                      <li><a class="dropdown-item" href="#">Buy Products</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Need Help ?</a></li>
-                    </ul>
-                  </li>
-
+          <div class="collapse navbar-collapse flex-wrap" id="mainNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Account
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="supportDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Support
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul
+                  class="dropdown-menu dropdown-menu-dark"
+                  aria-labelledby="supportDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Product Support & Manuals</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Repair & Warranty</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Contact Support</a></li>
                 </ul>
               </li>
-              <li><i class="fas fa-shipping-fast"></i></li>
-
-             
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="accountDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Account
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-dark"
+                  aria-labelledby="accountDropdown"
+                >
+                  <li><a class="dropdown-item" href="#">My Account</a></li>
+                  <li><a class="dropdown-item" href="#">Order History</a></li>
+                  <li><a class="dropdown-item" href="#">Sony Rewards</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Sign In / Register</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-shopping-cart cart-icon"></i>
+                </a>
+              </li>
             </ul>
 
-        </div>
-            <!-- shipping Icon -->
-             <!-- <ul class="navbar-nav">
-                <a class="nav-link" href="#"></i>
+            <ul
+              class="navbar-nav w-100 justify-content-center category-links-bar"
+            >
+              <li class="nav-item dropdown mx-lg-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  TV & Home Theater
                 </a>
-             </ul> -->
-
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Televisions</a></li>
+                  <li><a class="dropdown-item" href="#">Soundbars</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Home Theater Systems</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Blu-ray & DVD Players</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown mx-lg-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Imaging
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Interchangeable-lens Cameras</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Lenses</a></li>
+                  <li><a class="dropdown-item" href="#">Compact Cameras</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Cinema Line Cameras</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown mx-lg-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Audio
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Headphones</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Wireless Speakers</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">MP3 Players</a></li>
+                </ul>
+              </li>
+              <li class="nav-item mx-lg-2">
+                <a class="nav-link" href="#">Mobile</a>
+              </li>
+              <li class="nav-item mx-lg-2">
+                <a class="nav-link" href="#">Offers</a>
+              </li>
+            </ul>
           </div>
         </div>
-    </div>
       </nav>
+    </header>
 
-
-      <!-- Second Header -->
-      <div class="container-fluid">
-        <div class="row" style="background: rgb(24, 22, 22);">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="links">
-
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row justify-content-flex-start align-items-center">
-              
-              
-
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Tv&Home Theater
-                                <!-- main link -->
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                          </li>
-        
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Imaging
-                            <!-- main link -->
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li>
-
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Audio
-                            <!-- main link -->
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li>
-
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            More
-                            <!-- main link -->
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li>
-
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Offers
-                            <!-- main link -->
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li>
-
-                    </ul>
-                </div>
-            </div>
+    <!-- ================== MAIN CONTENT ================== -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content text-white text-center">
+          <p class="hero-subtitle">ZV-1 II</p>
+          <h1 class="hero-title">All for vlogging</h1>
+          <p>
+            Capture the world the way you want. Create your stories, share your
+            world.
+          </p>
+          <p class="hero-price">$899.99</p>
+          <a href="#" class="btn btn-primary mt-3">Learn More</a>
         </div>
-      </div>     
-      
+      </section>
 
-
-  
-  <div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12" style="background: url(https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/May/5-23/desktop/hero.jpg); height: 90vh; background-size: cover;">
-        <div class="img-sec" style="margin:15% 30%">
-            <strong>ZV-1 ||</strong>
-            <h2>All for vlogging</h2>
-            <p>capture the world the way you want.</p>
-            <p>create your stories, share you world.</p>
-            <p class="price">$899.99</p>
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- Image section Ends here -->
-
-
-<div class="container">
-    <h1>Featured</h1>
-</div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card">
-            <img src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/1.jpg" style="width: 18rem" alt="" class="img-fluid">
-          <div class="card-text">
-            <h4 >Tvs</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card">
-            <img src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/2.jpg" style="width: 18rem" alt="" class="img-fluid">
-          <div class="card-text">
-            <h4>Headphones</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card">
-            <img src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/3.jpg" style="width: 18rem" alt="" class="img-fluid">
-          <div class="card-text">
-            <h4>Cameras</h4>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card">
-            <img src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/4.jpg" style="width: 18rem" alt="" class="img-fluid">
-          <div class="card-text">
-            <h4>Lenses</h4>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card">
-            <img src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/5.jpg" style="width: 18rem" alt="" class="img-fluid">
-          <div class="card-text">
-            <h4>Sound Bars</h4>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card">
-            <img src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/6.jpg" style="width: 18rem" alt="" class="img-fluid">
-          <div class="card-text">
-            <h4>Portable Speakers</h4>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card">
-            <img src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/7.jpg" style="width: 18rem" alt="" class="img-fluid">
-          <div class="card-text">
-            <h4>Smartphones</h4>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card">
-            <img src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/8.jpg" style="width: 18rem" alt="" class="img-fluid">
-          <div class="card-text">
-            <h4>Aibo</h4>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    </div>
-
-      <!-- header and icons -->
-      <div class="container">
-        <div class="row bg-light" style="height:auto">
-            <div class="col-12" style="padding-bottom: 60px;">
-              <div class="col-12">
-                <h1 class="p-5" style="font-weight: 400;" >Buy from sony and enjoy shopping made easy</h1>
+      <section class="container my-5">
+        <h2 class="text-center mb-4 section-title">Featured Categories</h2>
+        <div class="row">
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card">
+              <img
+                src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/1.jpg"
+                class="card-img-top"
+                alt="TVs"
+              />
+              <div class="card-body">
+                <h5 class="card-title">TVs</h5>
               </div>
-              <div class="col-lg-8">
-                <div class="items d-flex">
-                <div class="icon">
-                    <img src="https://api.electronics.sony.com/medias/?context=bWFzdGVyfGltYWdlc3w0MDM0fGltYWdlL3BuZ3xoNTIvaDI3Lzg4MTEyNDc4MjkwMjJ8ZDNlM2RhZDYxNjgxYWI0ZTNjMjM5YjY1NjcyMjc5OTA3MjRjZDQ5NWJhZDhlNjZkOTkxZDdlYzM1Mzc2MDg3Ng" alt="">
-                </div>
-                <div class="text">
-                    <h3 class="align-self-flex-start" style="font-weight: 300;">Join Sony Rewards</h3>
-                    <h1 class="align-self-flex-end" style="font-weight: 400;">Earn points with every purchase</h1>
-                </div>
-
             </div>
-            <div class="col-lg-4">
-                <div class="shipping-icons m-5 d-flex justify-content-space-between">
-
-                        <div class="free-shipping" style="margin-left: 10px;">
-                            <img src="https://d1ncau8tqf99kp.cloudfront.net/media/free-shipping.svg" alt="">
-                            <div class="text" style="font-size: 12px;">Free Shipping</div>
-                        </div>
-                        <div class="easy-30" style="margin-left: 20px;">
-                            <img src="https://d1ncau8tqf99kp.cloudfront.net/media/simple-easy-return.svg" alt="">
-                            <div class="text" style="font-size: 12px;">Easy-30-day-return</div>
-                        </div>
-                        <div class="1:1Expert" style="margin-left: 20px;">
-                            <img src="https://d1ncau8tqf99kp.cloudfront.net/media/chat-support-icon.svg" alt="">
-                            <div class="text" style="font-size:10px">1:1 Expert Support</div>
-                        </div>
-                        <div class="finance" style="margin-left: 20px;">
-                            <img src="https://d1ncau8tqf99kp.cloudfront.net/media/easy-way-to-pay.svg" alt="">
-                            <div class="text" style="font-size:10px">Financing Options</div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                    <button type="button" class="btn btn-outline-primary" style="width: 200px;">Sign up Now</button>
-                    
-                
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card">
+              <img
+                src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/2.jpg"
+                class="card-img-top"
+                alt="Headphones"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Headphones</h5>
+              </div>
             </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card">
+              <img
+                src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/3.jpg"
+                class="card-img-top"
+                alt="Cameras"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cameras</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card">
+              <img
+                src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/4.jpg"
+                class="card-img-top"
+                alt="Lenses"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Lenses</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card">
+              <img
+                src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/5.jpg"
+                class="card-img-top"
+                alt="Sound Bars"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Sound Bars</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card">
+              <img
+                src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/6.jpg"
+                class="card-img-top"
+                alt="Portable Speakers"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Portable Speakers</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card">
+              <img
+                src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/7.jpg"
+                class="card-img-top"
+                alt="Smartphones"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Smartphones</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card">
+              <img
+                src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/week_1_6/desktop/8.jpg"
+                class="card-img-top"
+                alt="Aibo"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Aibo</h5>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </section>
 
-    
+      <!-- Connect With Us Section -->
+      <section class="container my-5">
+        <h2 class="text-center mb-4 section-title">Connect With Us</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/1-25/desktop/connect1.jpg"
+                class="card-img-top"
+                alt="Create Action with Sony"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Create Action with Sony</h5>
+                <p class="card-text">
+                  The mission of Create Action is to amplify the efforts of
+                  local organizations through funding, storytelling, and
+                  collaboration.
+                </p>
+                <a href="#" class="btn btn-link mt-auto"
+                  >Learn More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2022/November/week_11_28-connect/connect2.jpg"
+                class="card-img-top"
+                alt="Review XG300 Speaker"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Review: XG300 Portable Speaker</h5>
+                <p class="card-text">
+                  Learn more about the XG300 portable wireless speaker and its
+                  features from tech reviewer Arsen.
+                </p>
+                <a href="#" class="btn btn-link mt-auto"
+                  >Watch Now <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2022/November/week_11_28-connect/connect3.jpg"
+                class="card-img-top"
+                alt="Unboxing Headphones"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Unboxing the WH-1000XM5</h5>
+                <p class="card-text">
+                  Creator Ava Kolker unboxes the WH-1000XM5 noise canceling
+                  headphones. See what comes in the box.
+                </p>
+                <a href="#" class="btn btn-link mt-auto"
+                  >Watch Now <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-      <!-- Slider Here -->
-      
-      
-
-      <!-- videos -->
-
+    <footer class="footer-section bg-black text-white pt-5 pb-4">
       <div class="container">
-        <div class="row d-flex flex-row justify-content-flex-start align-items-center">
-            <div class="col-12">
-        <h2 style="font-weight: 400;">Connect With US</h2>
-    </div>
-</div>
-      </div>
+        <div class="row">
+          <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h5>Shop & Learn</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Televisions</a></li>
+              <li><a href="#">Cameras</a></li>
+              <li><a href="#">Audio</a></li>
+              <li><a href="#">Video Cameras</a></li>
+              <li><a href="#">PlayStation</a></li>
+              <li><a href="#">Offers</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h5>Support</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Support Home</a></li>
+              <li><a href="#">Register Product</a></li>
+              <li><a href="#">Repair Status</a></li>
+              <li><a href="#">Contact Support</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h5>News & Info</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Press Releases</a></li>
+              <li><a href="#">About Sony</a></li>
+              <li><a href="#">Electronics Newsletter</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h5>Corporate</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Accessibility</a></li>
+              <li><a href="#">Environment</a></li>
+              <li><a href="#">Sony Group</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-8 col-sm-12 mb-4">
+            <h5>United States</h5>
+            <p class="text-dark">Follow us on social media</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
 
-      <!-- videos -->
-      <div class="container">
-    <div class="row">
-      <div class="col-sm-6 col-md-4 col-lg-4">
-        <div class="card">
-            <img src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2023/January/1-25/desktop/connect1.jpg" alt="" style="width: 30rem; height: 25rem;" class="img-fluid">
-          <div class="card-body">
-            <h4 class="card-title">Create Action with Sony</h4>
-            <p class="card-text">The mission of Create Action is to amplify the efforts
-                 of local organizations through funding, storytelling, and collaboration with Sony</p>
-                 <a href="#" style="text-decoration: none; font-size: 25px;">Learn More ></a>
+        <div class="row mt-4 pt-4 border-top border-secondary">
+          <div class="col-md-6">
+            <p class="small">
+              © 2023 Sony Electronics Inc. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end footer-legal-links">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">CA Privacy Notice</a>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-4">
-        <div class="card">
-            <img src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2022/November/week_11_28-connect/connect2.jpg" alt="" style="width: 30rem; height: 25rem;" class="img-fluid">
-          <div class="card-body">
-            <h4 class="card-title">Review: XG300 Portable Wireless Speaker</h4>
-            <p class="card-text">Learn more about the XG300 portable wireless speaker and its features from tech reviewer Arsen.</p>
-            <a href="#" style="text-decoration: none; font-size: 25px;">Watch Now ></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-4">
-        <div class="card">
-            <img src="https://d1ncau8tqf99kp.cloudfront.net/HOMEPAGE/2022/November/week_11_28-connect/connect3.jpg" alt="" style="width: 30rem; height: 25rem;" class="img-fluid">
-          <div class="card-body">
-            <h4 class="card-title">Unboxing the WH-1000XM5 Headphones</h4>
-            <p class="card-text">Creator Ava Kolker unboxes the WH-1000XM5 noise canceling headphones. See what they look like and what comes in the box.</p>
-            <a href="#" style="text-decoration: none; font-size: 25px;">Watch Now ></a>  
-        </div>
-        </div>
-      </div>
-      </div>
-      </div>
+    </footer>
 
-      <!-- footer -->
-      <div class="container-fluid" style="margin-top: 3%; background: black; height: 500px;">
-        <div class="row d-flex flex-row justify-content-space-between">
-            <div class="col-2 d-block">
-                <h3>News & Info</h3>
-                <a href="#">Press Realses</a>
-                <a href="#">Accessibility</a>
-                <a href="#">Sony Group Information</a>
-                <a href="#">Electronics Newsletter</a>
-                <a href="#">Influencer & Endorsement Guidelines</a>
-            </div>
-            <div class="col-2 d-block">
-                <h3>News & Info</h3>
-                <a href="#">Press Realses</a>
-                <a href="#">Accessibility</a>
-                <a href="#">Sony Group Information</a>
-                <a href="#">Electronics Newsletter</a>
-                <a href="#">Influencer & Endorsement Guidelines</a>
-            </div>
-            <div class="col-2 d-block">
-                <h3>News & Info</h3>
-                <a href="#">Press Realses</a>
-                <a href="#">Accessibility</a>
-                <a href="#">Sony Group Information</a>
-                <a href="#">Electronics Newsletter</a>
-               
-            </div>
-            <div class="col-2 d-block">
-                <h3>News & Info</h3>
-                <a href="#">Press Realses</a>
-                <a href="#">Accessibility</a>
-                <a href="#">Sony Group Information</a>
-                <a href="#">Electronics Newsletter</a>
-                <a href="#">Influencer & Endorsement Guidelines</a>
-                <a href="#">Accsesibility</a>
-                <a href="#">Sony Group Information</a>
-            </div>
-            <div class="col-2 d-block">
-                <h3>News & Info</h3>
-                <a href="#">Press Realses</a>
-                <a href="#">Accessibility</a>
-                <a href="#">Sony Group Information</a>
-                <a href="#">Electronics Newsletter</a>
-                <a href="#">Influencer & Endorsement Guidelines</a>
-            </div>
-            <div class="col-2 d-block">
-                <h3>News & Info</h3>
-                <a href="#">Press Realses</a>
-               
-            </div>
-        </div>
-        
-    </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-      </body>
-      </html>
-      
+    <!-- Bootstrap 5 JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
